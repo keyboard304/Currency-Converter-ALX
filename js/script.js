@@ -31,6 +31,27 @@ function loadFlag(element) {
     }
 }
 
+// Load exchange rate on page load
+window.addEventListener("load", () => {
+    getExchangeRate();
+});
+
+// Button click event
+getButton.addEventListener("click", e => {
+    e.preventDefault();
+    getExchangeRate();
+});
+
+// Exchange icon click event to swap currencies
+exchangeIcon.addEventListener("click", () => {
+    let tempCode = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = tempCode;
+    loadFlag(fromCurrency);
+    loadFlag(toCurrency);
+    getExchangeRate();
+});
+
 // Function to get exchange rate from API
 function getExchangeRate() {
     let amountVal = amount.value;
