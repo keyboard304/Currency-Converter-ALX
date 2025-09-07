@@ -1,35 +1,41 @@
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .custom-purple {
-    background-color: #675AFE;
+  background: #9d00ff;
+  background: linear-gradient(
+    90deg,
+    rgba(157, 0, 255, 1) 0%,
+    rgba(169, 143, 255, 1) 50%,
+    rgba(203, 140, 255, 1) 100%
+  );
 }
 
 .custom-purple-hover:hover {
-    background-color: #4534fe;
+  background-color: #4534fe;
 }
 
 .custom-purple-border {
-    border-color: #675AFE;
+  border-color: #675afe;
 }
 
 ::selection {
-    color: #fff;
-    background: #675AFE;
+  color: #fff;
+  background: #675afe;
 }
 
 /* Custom scrollbar for select dropdowns */
 select::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 select::-webkit-scrollbar-track {
-    background: #fff;
+  background: #fff;
 }
 
 select::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 8px;
-    border-right: 2px solid #ffffff;
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
 }
