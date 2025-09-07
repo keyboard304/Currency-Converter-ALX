@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Currency Converter App | Tailwind CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center px-2.5 custom-purple">
+    <div class="w-96 max-w-full p-8 rounded-lg bg-white shadow-xl">
+        <header class="text-3xl font-medium text-center mb-10">
+            Currency Converter
+        </header>
+        
+        <form class="space-y-6">
+            <!-- Amount Input -->
+            <div class="space-y-1">
+                <p class="text-lg mb-1">Enter Amount</p>
+                <input 
+                    type="text" 
+                    value="1" 
+                    class="w-full h-12 px-4 text-lg border border-gray-400 rounded focus:outline-none focus:border-2 focus:border-purple-600 focus:px-3.5"
+                >
+            </div>
+            
+            <!-- Currency Selection -->
+            <div class="flex items-center justify-between mt-5">
+                <!-- From Currency -->
+                <div class="space-y-1 from">
+                    <p class="text-lg mb-1">From</p>
+                    <div class="flex items-center justify-center w-28 h-11 border border-gray-400 rounded select-box">
+                        <img src="https://flagcdn.com/48x36/us.png" alt="flag" class="max-w-5 mr-1">
+                        <select class="bg-transparent text-base outline-none cursor-pointer">
+                            <!-- Options will be inserted via JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Exchange Icon -->
+                <div class="mt-8 icon">
+                    <i class="fas fa-exchange-alt text-xl cursor-pointer text-gray-600 hover:text-purple-600 transition-colors"></i>
+                </div>
+                
+                <!-- To Currency -->
+                <div class="space-y-1 to">
+                    <p class="text-lg mb-1">To</p>
+                    <div class="flex items-center justify-center w-28 h-11 border border-gray-400 rounded select-box">
+                        <img src="https://flagcdn.com/48x36/eg.png" alt="flag" class="max-w-5 mr-1">
+                        <select class="bg-transparent text-base outline-none cursor-pointer">
+                            <!-- Options will be inserted via JavaScript -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exchange Rate Display -->
+            <div class="text-lg my-6 exchange-rate">
+                Getting exchange rate...
+            </div>
+            
+            <!-- Convert Button -->
+            <button 
+                type="button"
+                class="w-full h-13 text-white text-lg cursor-pointer custom-purple rounded hover:custom-purple-hover transition-all duration-300 py-3"
+            >
+                Get Exchange Rate
+            </button>
+        </form>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/country-list.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
