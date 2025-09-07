@@ -62,7 +62,7 @@ function getExchangeRate() {
     exchangeRateTxt.innerText = "Getting exchange rate...";
     
     //place your api key in place of "YOUR-API-HERE"
-    let url = `https://v6.exchangerate-api.com/v6/YOUR-API-HERE/latest/${fromCurrency.value}`;
+    let url = `https://v6.exchangerate-api.com/v6/4b76f13e27e34a7d223fe2f5/latest/${fromCurrency.value}`;
     
     fetch(url)
         .then(response => response.json())
