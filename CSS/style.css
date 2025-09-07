@@ -1,0 +1,35 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-purple {
+    background-color: #675AFE;
+}
+
+.custom-purple-hover:hover {
+    background-color: #4534fe;
+}
+
+.custom-purple-border {
+    border-color: #675AFE;
+}
+
+::selection {
+    color: #fff;
+    background: #675AFE;
+}
+
+/* Custom scrollbar for select dropdowns */
+select::-webkit-scrollbar {
+    width: 8px;
+}
+
+select::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+select::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
+}
